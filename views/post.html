@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>发表留言</title>
+    <link rel="stylesheet" href="/public/css/reset.css" />
+    <link rel="stylesheet" href="/public/lib/css/bootstrap.css" />
+    <link rel="stylesheet" href="/public/css/header.css" />
+    <link rel="stylesheet" href="/public/css/footer.css" />
+    <link rel="stylesheet" href="/public/css/post.css" />
+  </head>
+  <body>
+    <div class="index">
+      <div id="header"></div>
+      <div class="index-container">
+        <div class="container-wrap">
+          <div class="page-header">
+            <h1 class="text-primary"><a href="/">首页</a> <small>发表留言</small></h1>
+          </div>
+          <form action="/pinglun" method="GET">
+            <div class="form-group">
+              <label for="name">你的名字</label>
+              <input type="input" name="name" class="form-control" id="name" required minlength="2" maxlength="10" placeholder="name" />
+            </div>
+            <div class="form-group">
+              <label for="textarea">留言内容</label>
+              <textarea name="message" class="form-control" rows="5" class="form-control" id="textarea" required minlength="3" maxlength="20"></textarea>
+            </div>
+            <button type="submit" class="btn btn-default">发表</button>
+          </form>
+        </div>
+      </div>
+      <div id="footer"></div>
+    </div>
+    <script src="/public/lib/js/jquery.js"></script>
+    <script src="/public/lib/js/bootstrap.js"></script>
+    <script>
+      // 引入公共文件
+      $(document).ready(function () {
+        $('#header').load('/views/common/header.html')
+        $('#footer').load('/views/common/footer.html')
+      })
+    </script>
+  </body>
+</html>

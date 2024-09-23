@@ -3,35 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>首页</title>
+    <title>模板引擎</title>
     <link rel="stylesheet" href="/public/css/reset.css" />
-    <link rel="stylesheet" href="/public/lib/css/bootstrap.css" />
     <link rel="stylesheet" href="/public/css/header.css" />
     <link rel="stylesheet" href="/public/css/footer.css" />
-    <link rel="stylesheet" href="/public/css/index.css" />
+    <link rel="stylesheet" href="/public/css/tmp.css" />
+    <script src="/public/lib/js/jquery.js"></script>
   </head>
   <body>
     <div class="index">
       <div id="header"></div>
-      
+
       <div class="index-container">
         <div class="container-wrap">
-          <div class="wrap-header">
-            <div class="header-title">留言板-发表您的留言</div>
-            <a class="btn btn-success" type="button" href="/post">发表留言</a>
-          </div>
-          <ul class="wrap-group">
-            {{each comments}}
-            <li class="list-group-item">{{$value.name}}说：{{$value.message}}  <span class="pull-right">{{$value.time}}</span></li>
-            {{/each}}
-          </ul>
+          <p>大家好，我叫{{name}}</p>
+          <p>我今年{{age}}岁</p>
+          <p>我喜欢{{hobby}}</p>
         </div>
       </div>
-      
+
       <div id="footer"></div>
     </div>
-    
-    <script src="/public/lib/js/jquery.js"></script>
+
     <script>
       // 引入公共文件
       $(document).ready(function () {

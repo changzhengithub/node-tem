@@ -1,4 +1,4 @@
-.index {
+.container {
   width: 100%;
   height: 100%;
   background-color: #fff;
@@ -6,7 +6,7 @@
 
 .index-container {
   width: 100%;
-  min-height: calc(100vh - 214px);
+  min-height: calc(100vh - 264px);
 }
 
 .index-container .container-wrap {
